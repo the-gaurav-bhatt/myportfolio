@@ -12,6 +12,7 @@ import {
   Send,
   ExternalLink,
 } from "lucide-react";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function Portfolio() {
@@ -49,7 +50,7 @@ export default function Portfolio() {
       summary:
         "Built a comprehensive e-learning platform with video streaming capabilities and a custom CMS.",
       image: "/image.png",
-      liveLink: "https://aplus-pathshala.com",
+      liveLink: "https://a-pathshala-service-1.vercel.app/",
     },
     {
       name: "Ticketing-App",
@@ -59,7 +60,7 @@ export default function Portfolio() {
       summary:
         "Engineered a scalable ticketing system with services for authentication, product management, and order processing.",
       image: "/api.png",
-      liveLink: "https://ticketing-app-demo.com",
+      liveLink: "https://github.com/the-gaurav-bhatt/ticketing-app",
     },
     {
       name: "MicroGraph-Backend-System",
@@ -68,7 +69,8 @@ export default function Portfolio() {
       summary:
         "Developed a robust backend system with independent services for User, Product, and Order management.",
       image: "/micrograph.png",
-      liveLink: "https://micrograph-demo.com",
+      liveLink:
+        "https://github.com/the-gaurav-bhatt/MicroGraphQl-Backend-System",
     },
     {
       name: "Bidding Engine",
@@ -77,7 +79,7 @@ export default function Portfolio() {
       summary:
         "Created a dynamic bidding platform allowing real-time collaboration and live leaderboards.",
       image: "/bidding.png",
-      liveLink: "https://bidding-engine-demo.com",
+      liveLink: "https://real-time-bidding-engine.vercel.app/",
     },
   ];
 
@@ -99,7 +101,7 @@ export default function Portfolio() {
     { category: "Tools", items: ["Git", "GitHub", "Postman", "VS Code"] },
   ];
 
-  const scrollToSection = (sectionId: any) => {
+  const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
@@ -137,8 +139,8 @@ export default function Portfolio() {
   }, []);
   // Close dropdown when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event: any) => {
-      if (!event.target.closest(".theme-selector")) {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (!(event.target as HTMLElement).closest(".theme-selector")) {
         setShowThemes(false);
       }
     };
@@ -239,31 +241,31 @@ export default function Portfolio() {
             Full Stack Engineer | Problem Solver | Innovator
           </p>
           <div className="flex justify-center space-x-4 mt-4">
-            <a
-              href="https://github.com/yourusername"
+            <Link
+              href="https://github.com/the-gaurav-bhatt"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-yellow-300"
             >
               <Github />
-            </a>
-            <a
-              href="https://linkedin.com/in/yourusername"
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/gaurav-bhatt-/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-yellow-300"
             >
               <Linkedin />
-            </a>
-            <a
-              href="mailto:your.email@example.com"
+            </Link>
+            <Link
+              href="mailto:bhattgaurav654@gmail.com"
               className="hover:text-yellow-300"
             >
               <Mail />
-            </a>
-            <a href="tel:+918431521694" className="hover:text-yellow-300">
+            </Link>
+            <Link href="tel:+918431521694" className="hover:text-yellow-300">
               <Phone />
-            </a>
+            </Link>
           </div>
         </motion.div>
       </section>
@@ -280,17 +282,17 @@ export default function Portfolio() {
             <User className="mr-2" /> About Me
           </h2>
           <p className="text-base md:text-lg">
-            I'm a passionate Full Stack Engineer currently pursuing my
-            Bachelor's degree at NMIT college in Bengaluru. With a strong
+            I&apos;m a passionate Full Stack Engineer currently pursuing my
+            Bachelor&apos;s degree at NMIT college in Bengaluru. With a strong
             foundation in computer science and hands-on experience in modern
             technologies, I specialize in developing scalable and responsive web
             applications using TypeScript, React, Node.js, and Python.
           </p>
           <p className="text-base md:text-lg">
             My journey in tech has led me to work on diverse projects, from
-            e-learning platforms to real-time bidding systems. I'm constantly
-            seeking new challenges and opportunities to expand my skillset and
-            contribute to innovative solutions.
+            e-learning platforms to real-time bidding systems. I&apos;m
+            constantly seeking new challenges and opportunities to expand my
+            skillset and contribute to innovative solutions.
           </p>
         </motion.div>
       </section>
@@ -375,14 +377,14 @@ export default function Portfolio() {
                     </span>
                   ))}
                 </div>
-                <a
+                <Link
                   href={project.liveLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-auto flex items-center justify-center bg-yellow-400 text-gray-800 py-2 rounded hover:bg-yellow-300 transition-colors"
                 >
                   View Project <ExternalLink className="ml-2 w-4 h-4" />
-                </a>
+                </Link>
               </div>
             ))}
           </div>
