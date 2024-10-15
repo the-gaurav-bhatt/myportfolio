@@ -81,6 +81,36 @@ export default function Portfolio() {
       image: "/bidding.png",
       liveLink: "https://real-time-bidding-engine.vercel.app/",
     },
+    {
+      name: "Real-Time Multiplayer Pong Game",
+      description:
+        "A real-time multiplayer Pong game built with plain JavaScript and Socket.IO for server communication.",
+      skills: ["JavaScript", "Socket.IO", "Node.js", "HTML5", "CSS"],
+      summary:
+        "Developed a real-time multiplayer Pong game where players can join and compete live. Used Socket.IO for real-time server-client communication and implemented game mechanics using plain JavaScript.",
+      image: "/ponggame.png",
+      liveLink: "https://pong-3538.onrender.com/",
+    },
+    {
+      name: "Movie Review Platform",
+      description:
+        "A platform to manage movies and reviews with search functionality and average rating calculation.",
+      skills: ["Next.js", "Tailwind CSS", "NodeJs", "Express", "mongoDB"],
+      summary:
+        "Developed a responsive web application with CRUD operations for movies and reviews, search functionality, and average rating calculation. Implemented dynamic UI updates for creating, editing, and deleting movies and reviews.",
+      image: "/moviereview.png",
+      liveLink: "https://movie-review-platform.vercel.app/",
+    },
+    {
+      name: "Menu Management System",
+      description:
+        "Node.js backend server for managing categories, subcategories, and items for a menu.",
+      skills: ["Node.js", "Express.js", "MongoDB", "Postman"],
+      summary:
+        "Created a backend system to manage a hierarchical menu structure with categories, subcategories, and items. Implemented features for search, CRUD operations, and tax applicability. Provided detailed documentation and a demo.",
+      image: "/api.png",
+      liveLink: "https://menu-management-backend.vercel.app/",
+    },
   ];
 
   const skills = [
